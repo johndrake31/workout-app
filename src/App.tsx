@@ -6,11 +6,14 @@ import AddWorkout from './components/AddWorkout';
 import Navbar from './components/Navbar';
 import LoginPage from './LoginPage';
 const App = () => {
+  
+
+
   return (
     <>
       <CssBaseline />
       <BrowserRouter>
-      <Navbar></Navbar>
+        <Navbar></Navbar>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='home' element={<Home />} />
