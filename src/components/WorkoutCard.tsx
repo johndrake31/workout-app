@@ -1,4 +1,4 @@
-
+import { useNavigate } from "react-router-dom";
 
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -17,7 +17,12 @@ interface IWorkoutCardProps {
   param?: string;
 }
 const WorkoutCard = (props: IWorkoutCardProps) => {
-  const { img, title, discription } = props;
+  const { img, title, discription, param } = props;
+  const navigate = useNavigate();
+
+  const navigateToWorkout=()=>{
+    navigate(`/workout/${param}`);
+  }
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia component='img' height='140' image={img} alt='' />
@@ -38,6 +43,7 @@ const WorkoutCard = (props: IWorkoutCardProps) => {
       </CardContent>
       <CardActions sx={{ backgroundColor: 'black' }}>
         <Button
+          onClick={navigateToWorkout}
           size='small'
           sx={{
             color: 'white',

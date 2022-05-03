@@ -1,28 +1,14 @@
-interface IWorkout {
-  mainTitle: string;
-  weekDuration: number[];
-  exercises: IExercise[];
-  restBreakSecs: number;
-  daysPerWeek?: number[];
-}
+import { IWorkout } from "../../interfaces/ISport";
 
-interface IExercise {
-  title: string;
-  sets: number[];
-  weight: number;
-  timed?: boolean;
-  timer?: number | null;
-  metric?: boolean;
-  notes?: string | null;
-  reps?: number[];
-  uri?: string;
-}
-
-export const workouts: IWorkout[] = [
+export const workoutSamples: IWorkout[] = [
+    // worout 1
   {
+    _id: '1',
     mainTitle: 'Pre-Phase',
     weekDuration: [3],
-
+    imgUrl: 'https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    discriptionShort: 'Build overall strength and muscle & prepare for Phase I',
+    discriptionExtra: 'Better coordination, increased strength, correction of muscle imbalances and improvement in exercise form.',
     exercises: [
       {
         title: 'Barbell Squats',
@@ -147,9 +133,13 @@ export const workouts: IWorkout[] = [
     ],
     restBreakSecs: 90,
   },
-  //next workout
+  //workout 2
   {
+    _id: '2',
+    imgUrl: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80',
     mainTitle: 'Phase 1: Workout A',
+    discriptionShort: 'To build maximum strength and power',
+    discriptionExtra: 'Rapid and dramatic strength gains. Your muscle will begin to feel hard and dense.',
     weekDuration: [4, 6],
     exercises: [
       {
@@ -245,15 +235,99 @@ export const workouts: IWorkout[] = [
     ],
     restBreakSecs: 180,
   },
-  //next workout
+  //workout 3
   {
+    _id: '3',
+    imgUrl: 'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2338&q=80',
     mainTitle: 'Phase 1: Workout B',
+    discriptionShort: 'To build maximum strength and power',
+    discriptionExtra: 'Rapid and dramatic strength gains. Your muscle will begin to feel hard and dense.',
     weekDuration: [4, 6],
     exercises: [
       {
-        title: 'Barbell Squats',
+        title: 'Good Mornings',
+        sets: [1],
+        reps: [10],
+        weight: 20,
+        timed: false,
+        timer: null,
+        notes: null,
+        metric: true,
+      },
+      {
+        title: 'Barbell Deadlifts',
+        sets: [4, 6],
+        reps: [1, 4],
+        weight: 20,
+        timed: false,
+        timer: null,
+        notes: null,
+        metric: true,
+      },
+      {
+        title: 'Standing Overhead Barbell Press',
+        sets: [4, 6],
+        reps: [1, 4],
+        weight: 20,
+        timed: false,
+        timer: null,
+        notes: null,
+        metric: true,
+      },
+      {
+        title: 'Rear Delt Flyes',
         sets: [2],
-        reps: [12, 16],
+        reps: [6, 8],
+        weight: 20,
+        timed: false,
+        timer: null,
+        notes: null,
+        metric: true,
+      },
+      {
+        title: 'Standing Dumbbell Shrugs',
+        sets: [2],
+        reps: [6, 8],
+        weight: 20,
+        timed: false,
+        timer: null,
+        notes: null,
+        metric: true,
+      },
+      {
+        title: 'Dumbbell Hammer Curls',
+        sets: [2],
+        reps: [6, 8],
+        weight: 20,
+        timed: false,
+        timer: null,
+        notes: null,
+        metric: true,
+      },
+      {
+        title: 'Dumbbell Overhead Tricep Extension',
+        sets: [2],
+        reps: [6, 8],
+        weight: 20,
+        timed: false,
+        timer: null,
+        notes: null,
+        metric: true,
+      },
+      {
+        title: 'Hanging Leg Raises',
+        sets: [5],
+        reps: [8, 20],
+        weight: 20,
+        timed: false,
+        timer: null,
+        notes: null,
+        metric: true,
+      },
+      {
+        title: 'Seated Calf Raises',
+        sets: [3],
+        reps: [8, 20],
         weight: 20,
         timed: false,
         timer: null,

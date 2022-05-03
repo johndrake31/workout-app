@@ -5,6 +5,7 @@ import Home from './components/Home';
 import AddWorkout from './components/AddWorkout';
 import Navbar from './components/Navbar';
 import LoginPage from './LoginPage';
+import WorkoutPage from './components/WorkoutPage';
 const App = () => {
   
 
@@ -17,6 +18,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='home' element={<Home />} />
+          <Route path='workout/:workoutId' element={<WorkoutPage />} />
           <Route path='addworkout' element={<AddWorkout />} />
           <Route path='loginpage' element={<LoginPage />} />
         </Routes>
