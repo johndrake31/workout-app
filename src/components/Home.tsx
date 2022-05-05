@@ -7,8 +7,8 @@ const Home = () => {
     <>
       <Container maxWidth='xl' sx={{ p: 3 }}>
         {workoutSamples &&
-          workoutSamples.map((workout) => (
-            <div className='my-3'>
+          workoutSamples.map((workout, index) => (
+            <div className='my-3' key={index*3.14 +'_workoutcard'}>
               <WorkoutCard
                 img={`${workout.imgUrl}`}
                 title={workout.mainTitle}

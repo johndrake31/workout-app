@@ -27,8 +27,8 @@ const WorkoutCard = (props: IWorkoutCardProps) => {
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia component='img' height='140' image={img} alt='' />
       
-      <CardContent sx={{ backgroundColor: 'black' }}>
-        <Typography color='white' gutterBottom variant='h5' component='div'>
+      <CardContent sx={{ backgroundColor: 'white' }}>
+        <Typography color='black' gutterBottom variant='h5' component='div'>
           {title}<Button
         onClick={() => {
           console.log('bob');
@@ -37,7 +37,7 @@ const WorkoutCard = (props: IWorkoutCardProps) => {
         <MoreHorizIcon sx={{ color: 'white' }} />
       </Button>
         </Typography>
-        <Typography variant='body2' color='white'>
+        <Typography variant='body2' color='black'>
           {discription}
         </Typography>
       </CardContent>
