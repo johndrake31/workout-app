@@ -5,7 +5,7 @@ import Home from './components/Home';
 import AddWorkout from './components/AddWorkout';
 import Navbar from './components/Navbar';
 import LoginPage from './LoginPage';
-import WorkoutPage from './components/WorkoutPage';
+import WorkoutPage from './components/workoutpage/WorkoutPage';
 const App = () => {
   
 
