@@ -8,11 +8,11 @@ const Exercise: React.FC<IExercise> = (props) => {
     imgUrl='', } = props;
   return (
     <>
-      <h2 className='text-white'>{title}</h2>
+      <h2 className=''>{title}</h2>
       <div>
-        <p className='text-white'>{sets}</p>
-        <p className='text-white'>{reps}</p>
-        <p className='text-white'>{weight}</p>
+        <p className=''>{sets}</p>
+        <p className=''>{reps}</p>
+        <p className=''>{weight}</p>
       </div>
     </>
   );

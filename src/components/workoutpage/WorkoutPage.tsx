@@ -1,4 +1,4 @@
-import { Container } from '@mui/material';
+import { Container, Pagination } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { IWorkout } from '../../interfaces/ISport';
@@ -7,8 +7,9 @@ import Exercise from './components/Exercise';
 
 const WorkoutPage = () => {
   const [workout, setWorkout] = useState<IWorkout>();
-  let params = useParams();
   const [breakTimer, setBreakTimer] = useState<number>(0);
+  const [page, setPage] = React.useState(2);
+  let params = useParams();
 
   useEffect(() => {
     const getWorkout = workoutSamples.filter(
@@ -22,9 +23,24 @@ const WorkoutPage = () => {
     }
   }, []);
 
+
+  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    console.log(workout?.exercises[value - 1]);
+    
+    setPage(value);
+  };
+
   return (
     <Container maxWidth='xl' sx={{ p: 3 }}>
-      {workout && workout.exercises.map((exr)=>(
+      <Pagination
+        count={workout?.exercises.length}
+        page={page}
+        onChange={handleChange}
+        shape='rounded'
+        boundaryCount={0}
+      />
+      {/* {workout && workout.exercises.map((exr, index)=>(
+        
         <Exercise 
         title={exr.title} 
         sets={exr.sets} 
@@ -39,14 +55,14 @@ const WorkoutPage = () => {
         />
 
       ))
-      }
-      <h2 className='text-white text-center'>{workout?.mainTitle}</h2>
-      <h3 className='text-white text-center'>{workout?.discriptionShort}</h3>
-      <h3 className='text-white text-center'>{workout?.discriptionExtra}</h3>
+      } */}
+      <h2 className='text-center'>{workout?.mainTitle}</h2>
+      <h3 className='text-center'>{workout?.discriptionShort}</h3>
+      <h3 className='text-center'>{workout?.discriptionExtra}</h3>
       <h4>{breakTimer}</h4>
       <button
         type='button'
-        className='btn btn-outline-light bg-transparent btn-lg'
+        className='btn btn-outline-dark bg-transparent btn-lg'
       >
         Start Break
       </button>
