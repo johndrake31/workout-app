@@ -11,6 +11,7 @@ export interface IWorkout {
 }
 
 export interface IExercise {
+  uuid?:string;
   title: string;
   sets: number[];
   weight: number;

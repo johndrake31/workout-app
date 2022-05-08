@@ -245,6 +245,7 @@ export const workoutSamples: IWorkout[] = [
     weekDuration: [4, 6],
     exercises: [
       {
+        uuid:"aslkhfklahfklashfklhasfklhiheiohoihiohoiofjkxvckjgiuw",
         title: 'Good Mornings',
         sets: [1],
         reps: [10],
@@ -255,6 +256,7 @@ export const workoutSamples: IWorkout[] = [
         metric: true,
       },
       {
+        uuid:"aslkhfklahfklashfklhasfklhiheiohoihiohoiofjkxvckjwwwwwwwwwwwwww",
         title: 'Barbell Deadlifts',
         sets: [4, 6],
         reps: [1, 4],
@@ -265,6 +267,7 @@ export const workoutSamples: IWorkout[] = [
         metric: true,
       },
       {
+        uuid:"aslkhfklahfklashfklhasfklhiheiohoihiohoiofjkxvckjgiuwwwwwwkkkkklll",
         title: 'Standing Overhead Barbell Press',
         sets: [4, 6],
         reps: [1, 4],
