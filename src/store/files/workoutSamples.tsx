@@ -131,7 +131,7 @@ export const workoutSamples: IWorkout[] = [
         metric: true,
       },
     ],
-    restBreakSecs: 90,
+    restBreakSecs: 10,
   },
   //workout 2
   {

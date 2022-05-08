@@ -168,10 +168,8 @@ const WorkoutPage = () => {
   }, []);
 
   //pagination
-  console.log(page);
-
-  const handleChange = (value: number) => {
-    const total = workout?.exercises.length
+  const handlePageChange = (value: number) => {
+    const total = workout?.exercises.length;
     if (page === 1 && value < 0) return;
     if (page === total && value > 0) return;
 
@@ -181,23 +179,20 @@ const WorkoutPage = () => {
     });
   };
 
-  const timerHandler = () => {
-    if (isClicked) return;
-    setIsClicked(true);
-    const exBreakInterval = setInterval(() => {
-      breakTimer !== 0
-        ? setBreakTimer((prevState) => {
-            return prevState - 1;
-          })
-        : setBreakTimer((prevState) => {
-            return prevState + 0;
-          });
-    }, 1000);
-    if (breakTimer <= 0) {
-      setIsClicked(false);
-      if (workout) setBreakTimer(workout.restBreakSecs);
-      clearInterval(exBreakInterval);
+  React.useEffect(() => {
+    if (isClicked) {
+      breakTimer > 0 && setTimeout(() => setBreakTimer(breakTimer - 1), 1000);
     }
+  }, [breakTimer, isClicked]);
+
+  const handleTimerBtn = () => {
+    if (isClicked) setIsClicked(false);
+    if (!isClicked) setIsClicked(true);
+  };
+
+  const handleTimerBtnReset = () => {
+    setBreakTimer(workout?.restBreakSecs);
+    setIsClicked(false);
   };
 
   return (
@@ -205,12 +200,11 @@ const WorkoutPage = () => {
       <Paginator
         page={page}
         count={workout?.exercises.length}
-        changePage={handleChange}
+        changePage={handlePageChange}
       />
 
       <h2 className='text-center'>{workout?.mainTitle}</h2>
       <h5 className='text-center'>{workout?.discriptionShort}</h5>
-      <h6 className='text-center'>{workout?.discriptionExtra}</h6>
 
       <Exercise
         title={exercise.title}
@@ -225,14 +219,26 @@ const WorkoutPage = () => {
         imgUrl={exercise.imgUrl}
       />
 
-      <h4>Break-Timer: {breakTimer} secs</h4>
-      <button
-        onClick={timerHandler}
-        type='button'
-        className='btn btn-outline-dark bg-transparent btn-lg'
-      >
-        Start Break
-      </button>
+      <h4 className='text-center'>Break-Timer: {breakTimer} secs</h4>
+      <div className='d-flex justify-content-evenly mt-4'>
+        <button
+          onClick={handleTimerBtn}
+          type='button'
+          className='btn btn-outline-light text-white bg-transparent btn-lg ' 
+          disabled={breakTimer <=0}
+        >
+          {!isClicked && 'Start'}
+          {isClicked && 'Stop'}
+        </button>
+
+        <button
+          onClick={handleTimerBtnReset}
+          type='button'
+          className='btn btn-outline-danger text-white bg-transparent btn-lg'
+        >
+          {'Reset'}
+        </button>
+      </div>
     </Container>
   );
 };
