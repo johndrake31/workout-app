@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <Container maxWidth='xl' sx={{ p: 3 }}>
-        <h2 className='text-white text-center text-bold'>Workouts</h2>
+        <h2 className='text-white text-center'>Workouts</h2>
         {workoutSamples &&
           workoutSamples.map((workout, index) => (
             <div className='my-3' key={index*3.14 +'_workoutcard'}>

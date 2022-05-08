@@ -33,11 +33,11 @@ const Exercise: React.FC<IExercise> = (props) => {
       <hr />
       <h3 className='text-center'>Exercise</h3>
       <h3 className='text-center'>{title}</h3>
-      <div>
+      <div className='container'>
         <div className='row mt-3 justify-content-between'>
           <div className='col-8 h4 p-2'>
             <span
-              className='me-4'
+              className='me-5'
               onClick={() => {
                 handleSetWeight(-1);
               }}
@@ -48,7 +48,7 @@ const Exercise: React.FC<IExercise> = (props) => {
               />
             </span>
             <span
-              className='me-4'
+              className=''
               onClick={() => {
                 handleSetWeight(1);
               }}
@@ -57,23 +57,22 @@ const Exercise: React.FC<IExercise> = (props) => {
             </span>
           </div>
           <div className='col-4 h4 p-2 border border-light rounded text-center'>
-            <span className='h3'>{exWeight}</span>
-            <span className='me-4 h3'>{metric ? ' kg' : ' lbs'}</span>
+            <span className=''>{exWeight}</span>
+            <span className=''>{metric ? ' kg' : ' lbs'}</span>
           </div>
         </div>
-        <div className='container'>
-          <div className='row mt-3 justify-content-between '>
-            <span className='col-8 h4 p-2 '>Sets: </span>
-            <span className='col-4 h4 p-2 border border-light rounded text-center'>
-              {sets}
-            </span>
-          </div>
-          <div className='row mt-3 justify-content-between '>
-            <span className='col-8 h4 p-2 '>Reps: </span>
-            <span className='col-4 h4 p-2 border border-light rounded text-center'>
-              {reps ? reps[0] : 0} - {reps ? reps[1] : 0}
-            </span>
-          </div>
+
+        <div className='row mt-3 justify-content-between '>
+          <span className='col-8 h4 p-2 '>Sets: </span>
+          <span className='col-4 h4 p-2 border border-light rounded text-center'>
+            {sets}
+          </span>
+        </div>
+        <div className='row mt-3 justify-content-between '>
+          <span className='col-8 h4 p-2 '>Reps: </span>
+          <span className='col-4 h4 p-2 border border-light rounded text-center text-white'>
+            {reps ? reps[0] : 0} {reps![1] ? "- "+reps![1] :""}
+          </span>
         </div>
       </div>
     </div>
