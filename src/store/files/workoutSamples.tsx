@@ -10,8 +10,8 @@ import lunges from '../images/big-dodzy-gTTtXwqmKPQ-unsplash.jpg';
 import curlsBB from '../images/anastase-maragos-7kEpUPB8vNk-unsplash.jpg';
 import benchPressBB from '../images/alora-griffiths-V3GnMeRhnjk-unsplash.jpg';
 import shrugsDB from '../images/aaron-brogden-miCR9VIQ5PE-unsplash.jpg';
-import deadliftBB from '../images/aaron-brogden-miCR9VIQ5PE-unsplash.jpg';
-import rearDeltFly from '../images/victor-freitas-WvDYdXDzkhs-unsplash.jpg';
+import deadliftBB from '../images/victor-freitas-WvDYdXDzkhs-unsplash.jpg';
+import rearDeltFly from '../images/gordon-cowie-7oPvdWF9gi0-unsplash.jpg';
 import calfRaisesBW from '../images/ejercicios-gemelos-950x534.png';
 
 export const workoutSamples: IWorkout[] = [

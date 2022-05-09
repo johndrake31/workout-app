@@ -1,7 +1,7 @@
 import { IExercise } from '../../../interfaces/ISport';
 import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox';
 import AddBoxIcon from '@mui/icons-material/AddBox';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 const Exercise: React.FC<IExercise> = (props) => {
   const {
     title,
@@ -13,10 +13,15 @@ const Exercise: React.FC<IExercise> = (props) => {
     metric = true,
     notes = '',
     uri = '',
-    imgUrl = '',
+    imgUrl,
   } = props;
 
   const [exWeight, setExWeight] = useState(weight ? weight : 20);
+  const [image, setImage] = useState('');
+
+  useEffect(()=>{
+    if(imgUrl) setImage(imgUrl);
+  }, [imgUrl])
 
   const handleSetWeight = (num: number) =>
     setExWeight((prevState) => {
@@ -28,7 +33,7 @@ const Exercise: React.FC<IExercise> = (props) => {
     });
   return (
     <div className='text-white bg-dark'>
-      {imgUrl && <img src={imgUrl} className="img-fluid" alt={title}/>}
+      {imgUrl && <img src={image} className="img-fluid" alt={title}/>}
       <hr />
       <h3 className='text-center'>Exercise</h3>
       <h3 className='text-center'>{title}</h3>
