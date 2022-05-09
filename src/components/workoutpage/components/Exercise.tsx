@@ -38,7 +38,7 @@ const Exercise: React.FC<IExercise> = (props) => {
           <div className='col-8 h4 p-2'>
             <span
               className='me-5'
-              onClick={() => {
+              onTouchStart={() => {
                 handleSetWeight(-1);
               }}
             >
@@ -49,7 +49,7 @@ const Exercise: React.FC<IExercise> = (props) => {
             </span>
             <span
               className=''
-              onClick={() => {
+              onTouchStart={() => {
                 handleSetWeight(1);
               }}
             >
