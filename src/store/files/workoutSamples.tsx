@@ -1,14 +1,30 @@
-import { IWorkout } from "../../interfaces/ISport";
+import { IWorkout } from '../../interfaces/ISport';
+import squatBB from '../images/rinke-dohmen-NzP0AXtJqII-unsplash.jpg';
+import rowDB1 from '../images/tony-woodhead-kYdkUweH8QU-unsplash.jpg';
+import rowDBalt2 from '../images/lorenzo-hamers-jvIaut-V9a4-unsplash.jpg';
+import rowDBalt3 from '../images/alora-griffiths-LOnMc8Rp1Qs-unsplash.jpg';
+import plank from '../images/gordon-cowie-ISg1JhN_vFk-unsplash.jpg';
+import militaryPressDB from '../images/elias-vicario-xLPtz3hC2x4-unsplash.jpg';
+import triPressDown from '../images/daniel-apodaca-WdoQio6HPVA-unsplash.jpg';
+import lunges from '../images/big-dodzy-gTTtXwqmKPQ-unsplash.jpg';
+import curlsBB from '../images/anastase-maragos-7kEpUPB8vNk-unsplash.jpg';
+import benchPressBB from '../images/alora-griffiths-V3GnMeRhnjk-unsplash.jpg';
+import shrugsDB from '../images/aaron-brogden-miCR9VIQ5PE-unsplash.jpg';
+import deadliftBB from '../images/aaron-brogden-miCR9VIQ5PE-unsplash.jpg';
+import rearDeltFly from '../images/victor-freitas-WvDYdXDzkhs-unsplash.jpg';
+import calfRaisesBW from '../images/ejercicios-gemelos-950x534.png';
 
 export const workoutSamples: IWorkout[] = [
-    // worout 1
+  // worout 1
   {
     _id: '1',
     mainTitle: 'Pre-Phase',
     weekDuration: [3],
-    imgUrl: 'https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    imgUrl:
+      'https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
     discriptionShort: 'Build overall strength and muscle & prepare for Phase I',
-    discriptionExtra: 'Better coordination, increased strength, correction of muscle imbalances and improvement in exercise form.',
+    discriptionExtra:
+      'Better coordination, increased strength, correction of muscle imbalances and improvement in exercise form.',
     exercises: [
       {
         title: 'Barbell Squats',
@@ -19,6 +35,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: squatBB,
       },
       {
         title: 'Walking Lunges',
@@ -29,6 +46,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: lunges,
       },
       {
         title: 'Barbell Deadlift',
@@ -39,6 +57,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: deadliftBB,
       },
       {
         title: 'Barbell Bench Press',
@@ -49,6 +68,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: benchPressBB,
       },
       {
         title: 'Dumbbell Rows',
@@ -59,6 +79,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: rowDB1,
       },
       {
         title: 'Dumbbell Shrugs',
@@ -69,9 +90,10 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: shrugsDB,
       },
       {
-        title: 'Standing Dumbbell Shoulder Press',
+        title: 'Military Dumbbell Press',
         sets: [2],
         reps: [12, 16],
         weight: 20,
@@ -79,6 +101,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: militaryPressDB,
       },
       {
         title: 'Rear Delt Flyes',
@@ -89,6 +112,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: rearDeltFly,
       },
       {
         title: 'Barbell Curls',
@@ -99,6 +123,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: curlsBB,
       },
       {
         title: 'Tricep Pressdown',
@@ -109,6 +134,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: triPressDown,
       },
       {
         title: 'Isometric Planks',
@@ -119,6 +145,7 @@ export const workoutSamples: IWorkout[] = [
         timer: 60,
         notes: null,
         metric: true,
+        imgUrl: plank,
       },
       {
         title: 'Bodyweight Calf Raises',
@@ -129,17 +156,20 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: calfRaisesBW,
       },
     ],
-    restBreakSecs: 10,
+    restBreakSecs: 90,
   },
   //workout 2
   {
     _id: '2',
-    imgUrl: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80',
+    imgUrl:
+      'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80',
     mainTitle: 'Phase 1: Workout A',
     discriptionShort: 'To build maximum strength and power',
-    discriptionExtra: 'Rapid and dramatic strength gains. Your muscle will begin to feel hard and dense.',
+    discriptionExtra:
+      'Rapid and dramatic strength gains. Your muscle will begin to feel hard and dense.',
     weekDuration: [4, 6],
     exercises: [
       {
@@ -151,6 +181,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
       {
         title: 'Barbell Squats',
@@ -161,6 +192,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
       {
         title: 'Barbell Bench Press',
@@ -171,6 +203,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
       {
         title: 'Weighted Pull-Ups',
@@ -181,6 +214,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
       {
         title: 'Barbell Shrugs',
@@ -191,6 +225,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
       {
         title: 'Barbell Curls',
@@ -201,6 +236,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
       {
         title: 'Barbell Skull Crushers',
@@ -211,6 +247,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
       {
         title: 'Weighted Decline Sit-Ups',
@@ -221,6 +258,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
       {
         title: 'Standing Calf Raises',
@@ -231,6 +269,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
     ],
     restBreakSecs: 180,
@@ -238,14 +277,16 @@ export const workoutSamples: IWorkout[] = [
   //workout 3
   {
     _id: '3',
-    imgUrl: 'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2338&q=80',
+    imgUrl:
+      'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2338&q=80',
     mainTitle: 'Phase 1: Workout B',
     discriptionShort: 'To build maximum strength and power',
-    discriptionExtra: 'Rapid and dramatic strength gains. Your muscle will begin to feel hard and dense.',
+    discriptionExtra:
+      'Rapid and dramatic strength gains. Your muscle will begin to feel hard and dense.',
     weekDuration: [4, 6],
     exercises: [
       {
-        uuid:"aslkhfklahfklashfklhasfklhiheiohoihiohoiofjkxvckjgiuw",
+        uuid: 'aslkhfklahfklashfklhasfklhiheiohoihiohoiofjkxvckjgiuw',
         title: 'Good Mornings',
         sets: [1],
         reps: [10],
@@ -254,9 +295,10 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
       {
-        uuid:"aslkhfklahfklashfklhasfklhiheiohoihiohoiofjkxvckjwwwwwwwwwwwwww",
+        uuid: 'aslkhfklahfklashfklhasfklhiheiohoihiohoiofjkxvckjwwwwwwwwwwwwww',
         title: 'Barbell Deadlifts',
         sets: [4, 6],
         reps: [1, 4],
@@ -265,9 +307,10 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
       {
-        uuid:"aslkhfklahfklashfklhasfklhiheiohoihiohoiofjkxvckjgiuwwwwwwkkkkklll",
+        uuid: 'aslkhfklahfklashfklhasfklhiheiohoihiohoiofjkxvckjgiuwwwwwwkkkkklll',
         title: 'Standing Overhead Barbell Press',
         sets: [4, 6],
         reps: [1, 4],
@@ -276,6 +319,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
       {
         title: 'Rear Delt Flyes',
@@ -286,6 +330,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
       {
         title: 'Standing Dumbbell Shrugs',
@@ -296,6 +341,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
       {
         title: 'Dumbbell Hammer Curls',
@@ -306,6 +352,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
       {
         title: 'Dumbbell Overhead Tricep Extension',
@@ -316,6 +363,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
       {
         title: 'Hanging Leg Raises',
@@ -326,6 +374,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
       {
         title: 'Seated Calf Raises',
@@ -336,6 +385,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
+        imgUrl: '',
       },
     ],
     restBreakSecs: 180,

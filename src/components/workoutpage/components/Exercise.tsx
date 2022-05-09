@@ -1,5 +1,4 @@
 import { IExercise } from '../../../interfaces/ISport';
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import { useState } from 'react';
@@ -29,7 +28,7 @@ const Exercise: React.FC<IExercise> = (props) => {
     });
   return (
     <div className='text-white bg-dark'>
-      <h1>Future Image</h1>
+      {imgUrl && <img src={imgUrl} className="img-fluid" alt={title}/>}
       <hr />
       <h3 className='text-center'>Exercise</h3>
       <h3 className='text-center'>{title}</h3>
