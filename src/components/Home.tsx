@@ -1,5 +1,4 @@
 import Container from '@mui/material/Container';
-import Navbar from './Navbar';
 import WorkoutCard from './WorkoutCard';
 import { workoutSamples } from '../store/files/workoutSamples';
 const Home = () => {

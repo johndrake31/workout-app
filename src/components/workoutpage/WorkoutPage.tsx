@@ -1,10 +1,11 @@
-import { Container, Pagination } from '@mui/material';
+import { Container } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { IExercise, IWorkout } from '../../interfaces/ISport';
 import { workoutSamples } from '../../store/files/workoutSamples';
 import Exercise from './components/Exercise';
 import Paginator from '../Paginator';
+
 
 const WorkoutPage = () => {
   const [workout, setWorkout] = useState<IWorkout>({
@@ -78,7 +79,7 @@ const WorkoutPage = () => {
         metric: true,
       },
       {
-        title: 'Standing Dumbbell Shoulder Press',
+        title: 'Military Dumbbell Press',
         sets: [2],
         reps: [12, 16],
         weight: 20,
@@ -140,6 +141,7 @@ const WorkoutPage = () => {
     ],
     restBreakSecs: 90,
   });
+
   const [breakTimer, setBreakTimer] = useState<number>(0);
   const [page, setPage] = React.useState(1);
   const [isClicked, setIsClicked] = useState(false);
@@ -164,6 +166,7 @@ const WorkoutPage = () => {
     if (getWorkout) {
       setWorkout(getWorkout[0]);
       setBreakTimer(getWorkout[0].restBreakSecs);
+      setExercise(getWorkout[0].exercises[0])
     }
   }, []);
 
@@ -224,8 +227,8 @@ const WorkoutPage = () => {
         <button
           onClick={handleTimerBtn}
           type='button'
-          className='btn btn-outline-light text-white bg-transparent btn-lg ' 
-          disabled={breakTimer <=0}
+          className='btn btn-outline-light text-white bg-transparent btn-lg '
+          disabled={breakTimer <= 0}
         >
           {!isClicked && 'Start'}
           {isClicked && 'Stop'}

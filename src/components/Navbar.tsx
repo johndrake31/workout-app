@@ -24,7 +24,7 @@ const Navbar = () => {
         </Button>
       </NavLink>
       <NavLink
-        to='addworkout'
+        to='/addworkout'
         className={({ isActive }) =>
           isActive
             ? classes['button-52-active'] 
@@ -42,7 +42,7 @@ const Navbar = () => {
         </Button>
       </NavLink>
       <NavLink
-        to='loginpage'
+        to='/loginpage'
         className={({ isActive }) =>
           isActive
             ? classes['button-52-active'] 
