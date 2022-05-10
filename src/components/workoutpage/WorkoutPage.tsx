@@ -6,7 +6,6 @@ import { workoutSamples } from '../../store/files/workoutSamples';
 import Exercise from './components/Exercise';
 import Paginator from '../Paginator';
 
-
 const WorkoutPage = () => {
   const [workout, setWorkout] = useState<IWorkout>({
     _id: '1',
@@ -166,7 +165,7 @@ const WorkoutPage = () => {
     if (getWorkout) {
       setWorkout(getWorkout[0]);
       setBreakTimer(getWorkout[0].restBreakSecs);
-      setExercise(getWorkout[0].exercises[0])
+      setExercise(getWorkout[0].exercises[0]);
     }
   }, []);
 
@@ -200,14 +199,14 @@ const WorkoutPage = () => {
 
   return (
     <Container maxWidth='xl' sx={{ p: 3, color: 'white' }}>
+
+      <h2 className='text-center'>{workout?.mainTitle}</h2>
+      <h5 className='text-center'>{workout?.discriptionShort}</h5>
       <Paginator
         page={page}
         count={workout?.exercises.length}
         changePage={handlePageChange}
       />
-
-      <h2 className='text-center'>{workout?.mainTitle}</h2>
-      <h5 className='text-center'>{workout?.discriptionShort}</h5>
 
       <Exercise
         title={exercise.title}
@@ -221,7 +220,11 @@ const WorkoutPage = () => {
         uri={exercise.uri}
         imgUrl={exercise.imgUrl}
       />
-
+      <Paginator
+        page={page}
+        count={workout?.exercises.length}
+        changePage={handlePageChange}
+      />
       <h4 className='text-center'>Break-Timer: {breakTimer} secs</h4>
       <div className='d-flex justify-content-evenly mt-4'>
         <button
