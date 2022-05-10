@@ -12,7 +12,7 @@ import benchPressBB from '../images/alora-griffiths-V3GnMeRhnjk-unsplash.jpg';
 import shrugsDB from '../images/aaron-brogden-miCR9VIQ5PE-unsplash.jpg';
 import deadliftBB from '../images/victor-freitas-WvDYdXDzkhs-unsplash.jpg';
 import rearDeltFly from '../images/gordon-cowie-7oPvdWF9gi0-unsplash.jpg';
-import calfRaisesBW from '../images/ejercicios-gemelos-950x534.png';
+import calfRaisesBW from '../images/calf-raise.jpeg';
 
 export const workoutSamples: IWorkout[] = [
   // worout 1
