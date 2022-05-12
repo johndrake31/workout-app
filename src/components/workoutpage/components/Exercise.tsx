@@ -7,8 +7,7 @@ import {
   CardMedia,
   CardContent,
   Typography,
-  CardActions,
-  Button,
+  
 } from '@mui/material';
 const Exercise: React.FC<IExercise> = (props) => {
   const {
@@ -24,25 +23,26 @@ const Exercise: React.FC<IExercise> = (props) => {
     imgUrl,
   } = props;
 
-  const [exWeight, setExWeight] = useState(weight ? weight : 20);
+  const [exWeight, setExWeight] = useState<number>();
   const [image, setImage] = useState('');
 
   useEffect(() => {
+    if (weight) setExWeight(weight);
     if (imgUrl) setImage(imgUrl);
-  }, [imgUrl]);
+  }, [imgUrl, weight]);
 
-  const handleSetWeight = (num: number) =>
-    setExWeight((prevState) => {
-      if (prevState === 0 && num <= 0) {
-        return 0;
-      } else {
-        return (prevState += num);
-      }
-    });
+  const handleSetWeight = (num: number) => {
+    setExWeight(exWeight! + num);
+  };
   return (
     <div className='text-white bg-dark'>
       <Card sx={{ maxWidth: '100%' }}>
-        <CardMedia component='img' sx={{maxHeight: '25%'}} image={image} alt='' />
+        <CardMedia
+          component='img'
+          sx={{ maxHeight: '25%' }}
+          image={image}
+          alt=''
+        />
         <CardContent>
           <Typography gutterBottom variant='h4' component='div'>
             Exercise:
@@ -50,6 +50,12 @@ const Exercise: React.FC<IExercise> = (props) => {
           <Typography variant='h5' color='text.secondary'>
             {title}
           </Typography>
+
+          {notes && (
+            <Typography variant='body1' color='text.secondary'>
+              NOTES: {notes}
+            </Typography>
+          )}
         </CardContent>
       </Card>
 
@@ -58,7 +64,7 @@ const Exercise: React.FC<IExercise> = (props) => {
           <div className='col-8 h4 p-2'>
             <span
               className='me-5'
-              onTouchStart={() => {
+              onClick={() => {
                 handleSetWeight(-1);
               }}
             >
@@ -69,7 +75,7 @@ const Exercise: React.FC<IExercise> = (props) => {
             </span>
             <span
               className=''
-              onTouchStart={() => {
+              onClick={() => {
                 handleSetWeight(1);
               }}
             >
@@ -95,17 +101,6 @@ const Exercise: React.FC<IExercise> = (props) => {
           </span>
         </div>
 
-        {/* //Current Card */}
-        {/* <div className='text-white bg-dark'>
-        {/* {imgUrl && <img src={image} className='img-fluid' alt={title} />}
-        <hr />
-        <h3 className='text-center'>Exercise</h3>
-        <h3 className='text-center'>{title}</h3> */}
-
-        {/* <div className='container'>
-          
-        </div>
-      </div>  */}
       </div>
     </div>
   );

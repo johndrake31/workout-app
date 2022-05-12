@@ -5,6 +5,7 @@ import { IExercise, IWorkout } from '../../interfaces/ISport';
 import { workoutSamples } from '../../store/files/workoutSamples';
 import Exercise from './components/Exercise';
 import Paginator from '../Paginator';
+import Timer from '../Timer';
 
 const WorkoutPage = () => {
   const [workout, setWorkout] = useState<IWorkout>({
@@ -143,7 +144,6 @@ const WorkoutPage = () => {
 
   const [breakTimer, setBreakTimer] = useState<number>(0);
   const [page, setPage] = React.useState(1);
-  const [isClicked, setIsClicked] = useState(false);
   const [exercise, setExercise] = React.useState<IExercise>({
     title: 'Barbell Squats',
     sets: [2],
@@ -181,21 +181,7 @@ const WorkoutPage = () => {
     });
   };
 
-  React.useEffect(() => {
-    if (isClicked) {
-      breakTimer > 0 && setTimeout(() => setBreakTimer(breakTimer - 1), 1000);
-    }
-  }, [breakTimer, isClicked]);
 
-  const handleTimerBtn = () => {
-    if (isClicked) setIsClicked(false);
-    if (!isClicked) setIsClicked(true);
-  };
-
-  const handleTimerBtnReset = () => {
-    setBreakTimer(workout?.restBreakSecs);
-    setIsClicked(false);
-  };
 
   return (
     <Container maxWidth='xl' sx={{ p: 3, color: 'white' }}>
@@ -225,26 +211,7 @@ const WorkoutPage = () => {
         count={workout?.exercises.length}
         changePage={handlePageChange}
       />
-      <h4 className='text-center'>Break-Timer: {breakTimer} secs</h4>
-      <div className='d-flex justify-content-evenly mt-4'>
-        <button
-          onClick={handleTimerBtn}
-          type='button'
-          className='btn btn-outline-light text-white bg-transparent btn-lg '
-          disabled={breakTimer <= 0}
-        >
-          {!isClicked && 'Start'}
-          {isClicked && 'Stop'}
-        </button>
-
-        <button
-          onClick={handleTimerBtnReset}
-          type='button'
-          className='btn btn-outline-danger text-white bg-transparent btn-lg'
-        >
-          {'Reset'}
-        </button>
-      </div>
+      <Timer time={breakTimer} timerName={"rest break"}/>
     </Container>
   );
 };

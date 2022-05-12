@@ -13,6 +13,12 @@ import shrugsDB from '../images/aaron-brogden-miCR9VIQ5PE-unsplash.jpg';
 import deadliftBB from '../images/victor-freitas-WvDYdXDzkhs-unsplash.jpg';
 import rearDeltFly from '../images/gordon-cowie-7oPvdWF9gi0-unsplash.jpg';
 import calfRaisesBW from '../images/calf-raise.jpeg';
+import reelTim from '../images/reeltim.jpeg';
+import reardeltflies from '../images/reardeltflies.jpg';
+import dips from '../images/dips.jpg';
+import pullover from '../images/pullover.png';
+import ecartes from '../images/ecartes.jpg';
+
 
 export const workoutSamples: IWorkout[] = [
   // worout 1
@@ -389,5 +395,99 @@ export const workoutSamples: IWorkout[] = [
       },
     ],
     restBreakSecs: 180,
+  },
+  //workout 4
+  {
+    _id: '4',
+    imgUrl: reelTim,
+    mainTitle: 'Phase 1: Workout Tim',
+    discriptionShort: 'Reel Tim Reel Power',
+    discriptionExtra:
+      'Be a Sexy man like Tim.',
+    weekDuration: [3, 4],
+    exercises: [
+      {
+        uuid: 'aslkhfklahfklaffffffssssaaashfklhasfklhiheiohoihiohoiofjkxvckjgiuw',
+        title: 'DÉVELOPPÉ COUCHÉ',
+        sets: [4],
+        reps: [10],
+        weight: 60,
+        timed: false,
+        timer: null,
+        notes: 'À 70%',
+        metric: true,
+        imgUrl: benchPressBB,
+      },
+      {
+        uuid: 'aslkhfkla123569642dhfklashfklhasfklhiheiohoihiohoiofjkxvckjwwwwwwwwwwwwww',
+        title: 'ECARTÉS INCLINÉS HALTÈRES ',
+        sets: [4],
+        reps: [12],
+        weight: 15,
+        timed: false,
+        timer: null,
+        notes: 'À 25% ',
+        metric: true,
+        imgUrl: ecartes,
+      },
+      {
+        uuid: 'aslkhfklahfk2lashfklhasfklhilsfhfhsnawhopihpsihp7654heiohoihiohoiofjkxvckjgiuwwwwwwkkkkklll',
+        title: 'PULL OVER',
+        sets: [4],
+        reps: [10],
+        weight: 22.5,
+        timed: false,
+        timer: null,
+        notes: 'À 25%',
+        metric: true,
+        imgUrl: pullover,
+      },
+      {
+        title: 'DIPS',
+        sets: [4],
+        reps: [10],
+        weight: 0,
+        timed: false,
+        timer: null,
+        notes: 'Aide 42',
+        metric: true,
+        imgUrl: dips,
+      },
+      {
+        title: 'DÉVELOPPÉ MILITAIRE DEBOUT',
+        sets: [4],
+        reps: [10],
+        weight: 20,
+        timed: false,
+        timer: null,
+        notes: 'À 70%',
+        metric: true,
+        imgUrl: militaryPressDB,
+      },
+      {
+        title: 'OISEAU LATÉRAL DEBOUT',
+        sets: [4],
+        reps: [12],
+        weight: 15,
+        timed: false,
+        timer: null,
+        notes: 'À 20% ',
+        metric: true,
+        imgUrl: reardeltflies,
+      },
+      {
+        title: 'GAINAGE STATIQUE',
+        sets: [4],
+        reps: [3],
+        weight: 20,
+        timed: true,
+        timer: 45,
+        notes: null,
+        metric: true,
+        imgUrl: plank,
+      },
+      
+    ],
+    restBreakSecs: 90,
   },
 ];
