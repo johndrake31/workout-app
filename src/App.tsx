@@ -13,16 +13,19 @@ const App = () => {
   return (
     <>
       <CssBaseline />
+      <div className='red'>
       <BrowserRouter>
         <Navbar></Navbar>
         <Routes>
+          {/*  */}
           <Route path='/' element={<Home />} />
           <Route path='home' element={<Home />} />
           <Route path='/workout/:workoutId' element={<WorkoutPage />} />
-          <Route path='/addworkout' element={<AddWorkout />} />
+          <Route path='/delph' element={<AddWorkout />} />
           <Route path='/loginpage' element={<LoginPage />} />
         </Routes>
       </BrowserRouter>
+      </div>
     </>
   );
 };

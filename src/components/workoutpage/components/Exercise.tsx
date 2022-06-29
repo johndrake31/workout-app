@@ -91,7 +91,7 @@ const Exercise: React.FC<IExercise> = (props) => {
         <div className='row mt-3 justify-content-between '>
           <span className='col-8 h4 p-2 '>Sets: </span>
           <span className='col-4 h4 p-2 border border-light rounded text-center'>
-            {sets}
+            {sets ? sets[0] : 0} {sets![1] ? '- ' + sets![1] : ''}
           </span>
         </div>
         <div className='row mt-3 justify-content-between '>

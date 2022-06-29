@@ -1,7 +1,13 @@
 .App {
   text-align: center;
+
 }
 
+.red{
+  border-radius: 5px;
+  border-color: red;
+  border-style: dashed;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

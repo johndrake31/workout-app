@@ -4,7 +4,7 @@ import classes from './Navbar.module.css';
 
 const Navbar = () => {
   return (
-    <Container>
+    <Container sx={{ m: 2 }} >
       <NavLink
         to='/'
         className={({ isActive }) =>
@@ -15,9 +15,10 @@ const Navbar = () => {
       >
         <Button
           sx={{
-            backgroundColor: 'black',
+            backgroundColor: "#100f0f",
             'text-decoration': 'none',
-
+            color: 'white',
+            mr: 2
           }}
         >
           Home
@@ -33,9 +34,10 @@ const Navbar = () => {
       >
         <Button
           sx={{
-            backgroundColor: 'black',
+            backgroundColor: "#100f0f",
             'text-decoration': 'none',
-
+            color: 'white',
+            mr: 2,
           }}
         >
           Add Workout
@@ -51,9 +53,10 @@ const Navbar = () => {
       >
         <Button
           sx={{
-            backgroundColor: 'black',
+            backgroundColor: "#100f0f",
             'text-decoration': 'none',
-
+            color: 'white',
+            mr: 2,
           }}
         >
           Login
