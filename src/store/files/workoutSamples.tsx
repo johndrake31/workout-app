@@ -23,7 +23,7 @@ export const workoutSamples: IWorkout[] = [
   // worout 1
   {
     _id: '1',
-    mainTitle: 'Pre-Phase',
+    mainTitle: 'Anabolic Pre-Phase',
     weekDuration: [3],
     imgUrl:
       'https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
@@ -171,7 +171,7 @@ export const workoutSamples: IWorkout[] = [
     _id: '2',
     imgUrl:
       'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80',
-    mainTitle: 'Phase 1: Workout A',
+    mainTitle: 'Anabolic Phase I: Workout A',
     discriptionShort: 'To build maximum strength and power',
     discriptionExtra:
       'Rapid and dramatic strength gains. Your muscle will begin to feel hard and dense.',
@@ -284,7 +284,7 @@ export const workoutSamples: IWorkout[] = [
     _id: '3',
     imgUrl:
       'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2338&q=80',
-    mainTitle: 'Phase 1: Workout B',
+    mainTitle: 'Anabolic Phase I: Workout B',
     discriptionShort: 'To build maximum strength and power',
     discriptionExtra:
       'Rapid and dramatic strength gains. Your muscle will begin to feel hard and dense.',
@@ -395,105 +395,14 @@ export const workoutSamples: IWorkout[] = [
     ],
     restBreakSecs: 180,
   },
-  //workout 4
-  {
-    _id: '4',
-    imgUrl: reelTim,
-    mainTitle: 'Phase 1: Workout Tim',
-    discriptionShort: 'Reel Tim Reel Power',
-    discriptionExtra: 'Be a Sexy man like Tim.',
-    weekDuration: [3, 4],
-    exercises: [
-      {
-        uuid: 'aslkhfklahfklaffffffssssaaashfklhasfklhiheiohoihiohoiofjkxvckjgiuw',
-        title: 'DÉVELOPPÉ COUCHÉ',
-        sets: [4],
-        reps: [10],
-        weight: 60,
-        timed: false,
-        timer: null,
-        notes: 'À 70%',
-        metric: true,
-        imgUrl: benchPressBB,
-      },
-      {
-        uuid: 'aslkhfkla123569642dhfklashfklhasfklhiheiohoihiohoiofjkxvckjwwwwwwwwwwwwww',
-        title: 'ECARTÉS INCLINÉS HALTÈRES ',
-        sets: [4],
-        reps: [12],
-        weight: 15,
-        timed: false,
-        timer: null,
-        notes: 'À 25% ',
-        metric: true,
-        imgUrl: ecartes,
-      },
-      {
-        uuid: 'aslkhfklahfk2lashfklhasfklhilsfhfhsnawhopihpsihp7654heiohoihiohoiofjkxvckjgiuwwwwwwkkkkklll',
-        title: 'PULL OVER',
-        sets: [4],
-        reps: [10],
-        weight: 22.5,
-        timed: false,
-        timer: null,
-        notes: 'À 25%',
-        metric: true,
-        imgUrl: pullover,
-      },
-      {
-        title: 'DIPS',
-        sets: [4],
-        reps: [10],
-        weight: 0,
-        timed: false,
-        timer: null,
-        notes: 'Aide 42',
-        metric: true,
-        imgUrl: dips,
-      },
-      {
-        title: 'DÉVELOPPÉ MILITAIRE DEBOUT',
-        sets: [4],
-        reps: [10],
-        weight: 20,
-        timed: false,
-        timer: null,
-        notes: 'À 70%',
-        metric: true,
-        imgUrl: militaryPressDB,
-      },
-      {
-        title: 'OISEAU LATÉRAL DEBOUT',
-        sets: [4],
-        reps: [12],
-        weight: 15,
-        timed: false,
-        timer: null,
-        notes: 'À 20% ',
-        metric: true,
-        imgUrl: reardeltflies,
-      },
-      {
-        title: 'GAINAGE STATIQUE',
-        sets: [4],
-        reps: [3],
-        weight: 20,
-        timed: true,
-        timer: 45,
-        notes: null,
-        metric: true,
-        imgUrl: plank,
-      },
-    ],
-    restBreakSecs: 90,
-  },
+ 
   //workout 5
   {
     _id: '5',
     imgUrl:
       'https://images.unsplash.com/photo-1599058918144-1ffabb6ab9a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80',
     //PHASE II: Weeks 7-9 Muscle Fiber
-    mainTitle: 'PHASE II: Workout A',
+    mainTitle: 'Anabolic Phase II: Workout A',
     discriptionShort:
       'Focus more on the feel of the muscles being worked. Aim for perfect form and a good pump.',
     discriptionExtra:
@@ -611,14 +520,14 @@ export const workoutSamples: IWorkout[] = [
         imgUrl: 'https://images.unsplash.com/photo-1601986313624-28c11ac26334?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzJ8fHdvcmtvdXR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
       },
     ],
-    restBreakSecs: 180,
+    restBreakSecs: 60,
   },
   //workout 6
   {
     _id: '6',
     imgUrl:
       'https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80',
-    mainTitle: 'PHASE II: Workout B',
+    mainTitle: 'Anabolic Phase II: Workout B',
     discriptionShort: 'Focus more on the feel of the muscles being worked.',
     discriptionExtra:
       'Aim for perfect form and a good pump. Fuller and rounder muscles.',
