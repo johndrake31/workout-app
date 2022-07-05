@@ -13,7 +13,6 @@ import shrugsDB from '../images/aaron-brogden-miCR9VIQ5PE-unsplash.jpg';
 import deadliftBB from '../images/victor-freitas-WvDYdXDzkhs-unsplash.jpg';
 import rearDeltFly from '../images/gordon-cowie-7oPvdWF9gi0-unsplash.jpg';
 import calfRaisesBW from '../images/calf-raise.jpeg';
-import reelTim from '../images/reeltim.jpeg';
 import reardeltflies from '../images/reardeltflies.jpg';
 import dips from '../images/dips.jpg';
 import pullover from '../images/pullover.png';

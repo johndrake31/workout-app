@@ -1,0 +1,21 @@
+.flexColCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnGreen{
+    border-radius: 40px;
+    background-color: #05D4AF;
+    color: white;
+}
+.btnBlue{
+    border-radius: 40px;
+    background-color: #058fd4;
+    color: white;
+}
+.btnText{
+    border: none;
+    background-color: #ffff;
+    color: rgb(7, 7, 7);
+}

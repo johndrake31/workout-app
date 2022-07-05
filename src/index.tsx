@@ -1,14 +1,25 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import UserAuthContextProvider from './context/UserAuthContext.Provider';
 
-ReactDOM.render(
+const client = new ApolloClient({
+  uri: process.env.REACT_APP_API_HOST,
+  cache: new InMemoryCache(),
+});
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+root.render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider client={client}>
+      <UserAuthContextProvider>
+        <App />
+      </UserAuthContextProvider>
+    </ApolloProvider>
   </React.StrictMode>,
-  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
