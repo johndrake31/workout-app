@@ -3,6 +3,7 @@ import AuthContext from '../../../context/UserAuthContext';
 import { gql, useMutation } from '@apollo/client';
 import { useContext, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Grid } from '@mui/material';
 
 const CREATE_USER = gql`
   mutation CreateUser($data: CreateUserInput!) {
@@ -52,73 +53,101 @@ const Signup = () => {
         lastName: inputLastNameRef.current.value,
       };
 
-      CreateUser({ variables: {data:data} }).then((res) => {
+      CreateUser({ variables: { data: data } }).then((res) => {
         setTokenLogin(res.data.createUser);
         navigator('/', { replace: true });
       });
     }
   };
   return (
-    <div className="p-6 mt-5 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-x-4">
-      <div className="text-md flex-col font-medium text-black mt-5">
-        <h2 style={{ color: '#8E6161' }} className={'text-center'}>
-          Coffee Time
-        </h2>
-        <h4 style={{ color: '#4B4B4B' }} className="text-center">
-          Sign-up
-        </h4>
-        <br />
-        <div className={loginStyles.flexColCenter}>
-          {/* Mail */}
-          <label className="self-center space-around" htmlFor="mail">
-            Mail
-          </label>
-          <br />
-          <input type="email" id="mail" ref={inputEmailRef} />
-          <br />
+    <div className={'text-light p-4 ' + loginStyles.background}>
+        <h2 className='text-center text-white mb-5'>Pump Up Time</h2>
+        <h3 className='text-center text-white mb-5'>Login</h3>
+
+        <Grid
+          container
+          spacing={2}
+          direction='row'
+          justifyContent='center'
+          alignItems='center'
+        >
+          {/* Email */}
+          <Grid item xs={6} md={6}>
+            <label className='' htmlFor='mail'>
+              E-Mail
+            </label>
+          </Grid>
+          <Grid item xs={6} md={6}>
+            <input type='email' id='mail' ref={inputEmailRef} />
+          </Grid>
 
           {/* First Name */}
-          <label className="self-center space-around" htmlFor="firstName">
-            First Name
-          </label>
-          <br />
-          <input type="text" id="firstName" ref={inputFirstNameRef} />
-          <br />
+          <Grid item xs={6} md={6}>
+            <label className='self-center space-around' htmlFor='firstName'>
+              First Name
+            </label>
+          </Grid>
+          <Grid item xs={6} md={6}>
+            <input type='text' id='firstName' ref={inputFirstNameRef} />
+          </Grid>
 
           {/* Last Name */}
-          <label className="self-center space-around" htmlFor="lastName">
-            Last Name
-          </label>
-          <br />
-          <input type="text" id="lastName" ref={inputLastNameRef} />
-          <br />
+          <Grid item xs={6} md={6}>
+            <label className='self-center space-around' htmlFor='lastName'>
+              Last Name
+            </label>
+          </Grid>
+          <Grid item xs={6} md={6}>
+            <input type='text' id='lastName' ref={inputLastNameRef} />
+          </Grid>
 
-          <div>
-            <label htmlFor="password">Password</label>
-            <br />
-            <input type="password" placeholder="password" ref={inputPasswordRef} />
-            <br />
-            <label htmlFor="passwordRep">Repeat Password</label>
-            <br />
-            <input type="passwordRep" placeholder="password" ref={inputPasswordRepeatRef} />
-            <br />
-          </div>
-          <button className={loginStyles.btnGreen + ' px-5 py-1 mt-3'} onClick={signupHandler}>
+          {/* Password */}
+          <Grid item xs={6} md={6}>
+            <label htmlFor='password'>Password</label>
+          </Grid>
+          <Grid item xs={6} md={6}>
+            <input
+              type='text'
+              placeholder='password'
+              ref={inputPasswordRef}
+            />
+          </Grid>
+
+          <Grid item xs={6} md={6}>
+            <label htmlFor='passwordRep'>Repeat Password</label>
+          </Grid>
+          <Grid item xs={6} md={6}>
+            <input
+              type='passwordRep'
+              placeholder='password'
+              ref={inputPasswordRepeatRef}
+            />
+          </Grid>
+
+          <Grid item xs={6} md={6}>
+          <button
+            className={loginStyles.btnGreen + ' px-5 py-1 mt-3'}
+            onClick={signupHandler}
+          >
             {' '}
             Sign-up
           </button>
-          <br />
+          </Grid>
+          <Grid item xs={6} md={6}>
           <button
             className={loginStyles.btnText + ' px-5 py-1 mt-3'}
             onClick={() => {
-              navigator('/Login');
+              navigator('/loginpage');
             }}
           >
             {' '}
             Login
           </button>
-        </div>
-      </div>
+          </Grid>
+
+          <Grid item xs={6} md={6}></Grid>
+          <Grid item xs={6} md={6}></Grid>
+        </Grid>
     </div>
   );
 };

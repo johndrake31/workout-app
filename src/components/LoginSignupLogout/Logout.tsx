@@ -8,7 +8,7 @@ const Logout = () => {
 
   useEffect(() => {
     removeTokenLogout();
-    navigator('/Login', { replace: true });
+    navigator('/home', { replace: true });
   }, []);
   return (
     <>

@@ -5,8 +5,9 @@
 }
 
 .btnGreen{
+    border: none;
     border-radius: 40px;
-    background-color: #05D4AF;
+    background-color: #118b74;
     color: white;
 }
 .btnBlue{
@@ -16,6 +17,19 @@
 }
 .btnText{
     border: none;
-    background-color: #ffff;
-    color: rgb(7, 7, 7);
+    border-radius: 40px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.background{
+    height: 100vh;
+    width: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.401)), to(rgba(243, 98, 98, 0.799))), url(../../store/images/dips.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.401), rgb(243, 98, 98, 0.799)), url(../../store/images/dips.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding: 50px 8.3%;
+    position: relative;
 }
