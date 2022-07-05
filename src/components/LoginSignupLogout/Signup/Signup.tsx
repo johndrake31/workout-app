@@ -60,19 +60,19 @@ const Signup = () => {
     }
   };
   return (
-    <div className={'text-light p-4 ' + loginStyles.background}>
+    <div className={'text-light px-4 ' + loginStyles.background}>
         <h2 className='text-center text-white mb-5'>Pump Up Time</h2>
         <h3 className='text-center text-white mb-5'>Login</h3>
 
         <Grid
           container
-          spacing={2}
+          spacing={1}
           direction='row'
           justifyContent='center'
           alignItems='center'
         >
           {/* Email */}
-          <Grid item xs={6} md={6}>
+          <Grid item xs={5} md={5}>
             <label className='' htmlFor='mail'>
               E-Mail
             </label>
@@ -82,7 +82,7 @@ const Signup = () => {
           </Grid>
 
           {/* First Name */}
-          <Grid item xs={6} md={6}>
+          <Grid item xs={5} md={5}>
             <label className='self-center space-around' htmlFor='firstName'>
               First Name
             </label>
@@ -92,7 +92,7 @@ const Signup = () => {
           </Grid>
 
           {/* Last Name */}
-          <Grid item xs={6} md={6}>
+          <Grid item xs={5} md={5}>
             <label className='self-center space-around' htmlFor='lastName'>
               Last Name
             </label>
@@ -102,7 +102,7 @@ const Signup = () => {
           </Grid>
 
           {/* Password */}
-          <Grid item xs={6} md={6}>
+          <Grid item xs={5} md={5}>
             <label htmlFor='password'>Password</label>
           </Grid>
           <Grid item xs={6} md={6}>
@@ -113,7 +113,7 @@ const Signup = () => {
             />
           </Grid>
 
-          <Grid item xs={6} md={6}>
+          <Grid item xs={5} md={5}>
             <label htmlFor='passwordRep'>Repeat Password</label>
           </Grid>
           <Grid item xs={6} md={6}>
