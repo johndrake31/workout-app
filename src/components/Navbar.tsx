@@ -29,7 +29,7 @@ const Navbar = () => {
               mr: 2,
             }}
           >
-            Home
+            Workouts List
           </Button>
         </NavLink>
         {/* {isLogged && (

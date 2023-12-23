@@ -2,12 +2,12 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
-import AddWorkout from './components/AddWorkout';
+// import AddWorkout from './components/AddWorkout';
 import Navbar from './components/Navbar';
 import MyBigBad404 from './components/MyBigBad404';
 import WorkoutPage from './components/workoutpage/WorkoutPage';
-import Login from './components/LoginSignupLogout/Login/Login';
-import Signup from './components/LoginSignupLogout/Signup/Signup';
+// import Login from './components/LoginSignupLogout/Login/Login';
+// import Signup from './components/LoginSignupLogout/Signup/Signup';
 import UserAuthWrapper from './components/UserAuthWrapper';
 import Logout from './components/LoginSignupLogout/Logout';
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
           <Routes>
             {/*  */}
             <Route path='/' element={<Home />} />
-            <Route path='home' element={<Home />} />
+            <Route path='/home' element={<Home />} />
             <Route path='/workout/:workoutId' element={<WorkoutPage />} />
 
             {/* <Route

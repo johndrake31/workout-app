@@ -3,22 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+// import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import UserAuthContextProvider from './context/UserAuthContext.Provider';
 
-const client = new ApolloClient({
-  uri: process.env.REACT_APP_API_HOST,
-  cache: new InMemoryCache(),
-});
+// const client = new ApolloClient({
+//   uri: process.env.REACT_APP_API_HOST,
+//   cache: new InMemoryCache(),
+// });
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
+    {/* <ApolloProvider client={client}> */}
       <UserAuthContextProvider>
         <App />
       </UserAuthContextProvider>
-    </ApolloProvider>
+    {/* </ApolloProvider> */}
   </React.StrictMode>,
 );
 
