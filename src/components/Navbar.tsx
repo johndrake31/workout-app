@@ -5,7 +5,7 @@ import AuthContext from '../context/UserAuthContext';
 import classes from './Navbar.module.css';
 
 const Navbar = () => {
-  const { isLogged } = useContext(AuthContext);
+  // const { isLogged } = useContext(AuthContext);
 
   return (
     <Container sx={{ my: 2 }}>
@@ -32,7 +32,7 @@ const Navbar = () => {
             Home
           </Button>
         </NavLink>
-        {isLogged && (
+        {/* {isLogged && (
           <NavLink
             to='/addworkout'
             className={({ isActive }) =>
@@ -107,7 +107,7 @@ const Navbar = () => {
               Logout
             </Button>
           </NavLink>
-        )}
+        )} */}
       </Grid>
     </Container>
   );

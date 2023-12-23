@@ -16,24 +16,24 @@ const App = () => {
       <CssBaseline />
       <div className='red'>
         <BrowserRouter>
-          <Navbar></Navbar>
+          <Navbar/>
           <Routes>
             {/*  */}
             <Route path='/' element={<Home />} />
             <Route path='home' element={<Home />} />
             <Route path='/workout/:workoutId' element={<WorkoutPage />} />
 
-            <Route
+            {/* <Route
               path='/addworkout'
               element={
                 <UserAuthWrapper>
                   <AddWorkout />
                 </UserAuthWrapper>
               }
-            />
+            /> */}
 
-            <Route path='/loginpage' element={<Login />} />
-            <Route path='/signuppage' element={<Signup />} />
+            {/* <Route path='/loginpage' element={<Login />} />
+            <Route path='/signuppage' element={<Signup />} /> */}
             <Route
                 path="/Logout"
                 element={
