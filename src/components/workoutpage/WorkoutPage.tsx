@@ -6,14 +6,15 @@ import { workoutSamples } from '../../store/files/workoutSamples';
 import Exercise from './components/Exercise';
 import Paginator from '../Paginator';
 import Timer from '../Timer';
+import Navbar from '../Navbar';
+import deadLift from '../../store/images/barbellDeadLift.jpg'
 
 const WorkoutPage = () => {
   const [workout, setWorkout] = useState<IWorkout>({
     _id: '1',
     mainTitle: 'Pre-Phase',
     weekDuration: [3],
-    imgUrl:
-      'https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    imgUrl: deadLift,
     discriptionShort: 'Build overall strength and muscle & prepare for Phase I',
     discriptionExtra:
       'Better coordination, increased strength, correction of muscle imbalances and improvement in exercise form.',
@@ -185,7 +186,7 @@ const WorkoutPage = () => {
 
   return (
     <Container maxWidth='xl' sx={{ p: 3, color: 'white' }}>
-
+      <Navbar/>
       <h2 className='text-center'>{workout?.mainTitle}</h2>
       <h5 className='text-center'>{workout?.discriptionShort}</h5>
       <Paginator

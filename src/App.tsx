@@ -16,7 +16,7 @@ const App = () => {
       <CssBaseline />
       <div className='red'>
         <BrowserRouter>
-          <Navbar/>
+          {/* <Navbar/> */}
           <Routes>
             {/*  */}
             <Route path='/' element={<Home />} />
