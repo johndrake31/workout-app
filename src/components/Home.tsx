@@ -3,9 +3,9 @@ import WorkoutCard from './WorkoutCard';
 import { workoutSamples } from '../store/files/workoutSamples';
 import { Grid } from '@mui/material';
 import logo from '../../src/store/branding/miiGymCoachLogosPink.jpeg';
-import useMediaQuery from '@mui/material/useMediaQuery';
+// import useMediaQuery from '@mui/material/useMediaQuery';
 const Home = () => {
-  const matches = useMediaQuery('(max-width:900px)');
+  // const matches = useMediaQuery('(max-width:900px)');
   return (
     <>
       <Container maxWidth='xl' sx={{ p: 3 }}>
