@@ -21,5 +21,6 @@ export interface IExercise {
   notes?: string | null;
   reps?: number[];
   uri?: string;
+  isVideo?: boolean;
   imgUrl?: string | null;
 }

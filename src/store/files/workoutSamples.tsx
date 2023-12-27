@@ -435,7 +435,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: benchPressBB
+        imgUrl: benchPressBB,
       },
       {
         title: "Barbell Rows",
@@ -682,7 +682,22 @@ export const workoutSamples: IWorkout[] = [
         metric: true,
         imgUrl: situps,
       },
+      {
+        // #11
+        uuid: "aslkhfklahfklashfklhasfklhiheiohoihiohoiof8272jkxvckjgiuw",
+        title: "hardcore ab workout",
+        sets: [3],
+        reps: [30, 100],
+        weight: 20,
+        timed: false,
+        timer: null,
+        notes: null,
+        metric: true,
+        isVideo: true,
+        imgUrl: "5UbZXkF_40g",
+      },
     ],
     restBreakSecs: 60,
   },
 ];
+

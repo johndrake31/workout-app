@@ -206,6 +206,7 @@ const WorkoutPage = () => {
         notes={exercise.notes}
         uri={exercise.uri}
         imgUrl={exercise.imgUrl}
+        isVideo={exercise.isVideo}
       />
       <Paginator
         page={page}
