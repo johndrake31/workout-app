@@ -7,14 +7,24 @@ import triPressDown from "../images/triPressDown.jpg";
 import lunges from "../images/lunges.jpg";
 import curlsBB from "../images/straightBarCurl.jpg";
 import benchPressBB from "../images/benchPress.jpg";
-import shrugsDB from "../images/shrugs.jpg";
-import deadliftBB from "../images/deadlift.jpg";
+import shrugsDB from "../images/shoulderShrugs.jpg";
+import deadliftBB from "../images/barbellDeadLift.jpg";
 import rearDeltFly from "../images/rearDeltFlyes.jpg";
 import calfRaisesBW from "../images/calfRaise.jpeg";
 import boxSquat from "../images/boxSquat.jpg";
 import pullup from "../images/pullup1.jpg";
 import pullover from "../images/pullover.png";
-import situps from "../images/situps.jpg";
+import situps from "../images/situps2.jpg";
+import goodMornings from "../images/goodMornings.png";
+import hammerCurls from "../images/hammerCurls.jpg";
+import standingTricepExtension from "../images/standingTricepsExtension2.png";
+import legRaisesSuspended from "../images/legRaiseSuspended.jpg";
+import barbellRow from "../images/barbellRow.jpg";
+import lateralRaise from "../images/lateralRaise.webp";
+import curlsSup from "../images/curlsSup.png";
+import dips from "../images/dips.jpg";
+import legCurls from "../images/legCurls.png";
+
 export const workoutSamples: IWorkout[] = [
   // worout 1
   {
@@ -270,7 +280,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: calfRaisesBW,
       },
     ],
     restBreakSecs: 180,
@@ -296,7 +306,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: goodMornings,
       },
       {
         uuid: "aslkhfklahfklashfklhasfklhiheiohoihiohoiofjkxvckjwwwwwwwwwwwwww",
@@ -308,11 +318,11 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: deadliftBB,
       },
       {
         uuid: "aslkhfklahfklashfklhasfklhiheiohoihiohoiofjkxvckjgiuwwwwwwkkkkklll",
-        title: "Standing Overhead Barbell Press",
+        title: "Standing Overhead dumbbell Press",
         sets: [4, 6],
         reps: [1, 4],
         weight: 20,
@@ -320,7 +330,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: militaryPressDB,
       },
       {
         title: "Rear Delt Flyes",
@@ -331,7 +341,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: rearDeltFly,
       },
       {
         title: "Standing Dumbbell Shrugs",
@@ -342,7 +352,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: shrugsDB,
       },
       {
         title: "Dumbbell Hammer Curls",
@@ -353,10 +363,10 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: hammerCurls,
       },
       {
-        title: "Dumbbell Overhead Tricep Extension",
+        title: "Overhead Tricep Extension",
         sets: [2],
         reps: [6, 8],
         weight: 20,
@@ -364,7 +374,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: standingTricepExtension,
       },
       {
         title: "Hanging Leg Raises",
@@ -375,10 +385,10 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: legRaisesSuspended,
       },
       {
-        title: "Seated Calf Raises",
+        title: "Calf Raises",
         sets: [3],
         reps: [8, 20],
         weight: 20,
@@ -386,7 +396,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: calfRaisesBW,
       },
     ],
     restBreakSecs: 180,
@@ -417,7 +427,7 @@ export const workoutSamples: IWorkout[] = [
         imgUrl: barbellSquat,
       },
       {
-        title: "Incline Barbell Chest Press",
+        title: "Bench Press",
         sets: [3],
         reps: [8, 12],
         weight: 20,
@@ -425,8 +435,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl:
-          "https://images.unsplash.com/photo-1584466977773-e625c37cdd50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+        imgUrl: benchPressBB
       },
       {
         title: "Barbell Rows",
@@ -437,8 +446,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl:
-          "https://pixahive.com/wp-content/uploads/2020/08/Barbell-Row-Workout-48757-pixahive.jpg",
+        imgUrl: barbellRow,
       },
       {
         title: "Standing Dumbbell Shrugs",
@@ -471,8 +479,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl:
-          "https://i2.wp.com/pixahive.com/wp-content/uploads/2020/08/Sexy-Girl-doing-Dumbell-Exercise-in-the-Gym-23633-pixahive.jpg?fit=1000%2C666&ssl=1",
+        imgUrl: lateralRaise,
       },
       {
         title: "Dumbbell Supinating Curls",
@@ -483,8 +490,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl:
-          "https://images.unsplash.com/photo-1541338784564-51087dabc0de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+        imgUrl: curlsSup,
       },
       {
         title: "Weighted Dips",
@@ -495,11 +501,10 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl:
-          "https://images.unsplash.com/photo-1530822847156-5df684ec5ee1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        imgUrl: dips,
       },
       {
-        title: "Seated Calf Raises",
+        title: "Calf Raises",
         sets: [3],
         reps: [8, 12],
         weight: 20,
@@ -507,8 +512,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl:
-          "https://upload.wikimedia.org/wikipedia/commons/a/a5/Seated-calf-raise-2-2.gif?20101029133355",
+        imgUrl: calfRaisesBW,
       },
       {
         title: "Hanging Leg Raises",
@@ -519,8 +523,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl:
-          "https://images.unsplash.com/photo-1601986313624-28c11ac26334?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzJ8fHdvcmtvdXR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+        imgUrl: legRaisesSuspended,
       },
     ],
     restBreakSecs: 60,
@@ -547,7 +550,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: deadliftBB,
       },
       {
         // #2
@@ -560,7 +563,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: legCurls,
       },
       {
         // #3
@@ -573,12 +576,12 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: shrugsDB,
       },
       {
         // #4
         uuid: "aslkhfklahfklashfklhasfklhiheiohoihiohoiofjkxvckjgiuw",
-        title: "Flat Dumbbell Chest Press",
+        title: "Bench Press",
         sets: [3],
         reps: [8, 12],
         weight: 20,
@@ -586,7 +589,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: benchPressBB,
       },
       {
         // #5
@@ -599,7 +602,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: pullover,
       },
       {
         // #6
@@ -612,7 +615,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: pullup,
       },
       {
         // #7
@@ -625,7 +628,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: militaryPressDB,
       },
       {
         // #8
@@ -638,7 +641,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: curlsBB,
       },
       {
         // #9
@@ -651,7 +654,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: triPressDown,
       },
       {
         // #10
@@ -677,7 +680,7 @@ export const workoutSamples: IWorkout[] = [
         timer: null,
         notes: null,
         metric: true,
-        imgUrl: "",
+        imgUrl: situps,
       },
     ],
     restBreakSecs: 60,

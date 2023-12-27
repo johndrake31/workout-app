@@ -2,6 +2,7 @@ import { IExercise } from '../../../interfaces/ISport';
 import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import { useEffect, useState } from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import {
   Card,
   CardMedia,
@@ -10,6 +11,7 @@ import {
   
 } from '@mui/material';
 const Exercise: React.FC<IExercise> = (props) => {
+  const matches = useMediaQuery('(max-width:900px)');
   const {
     title,
     sets,
@@ -39,7 +41,7 @@ const Exercise: React.FC<IExercise> = (props) => {
       <Card sx={{ maxWidth: '100%' }}>
         <CardMedia
           component='img'
-          sx={{ maxHeight: '25%' }}
+          sx={{ maxHeight: '25%', maxWidth: matches ?'100%' : '60%', margin: 'auto' }}
           image={image}
           alt=''
         />
