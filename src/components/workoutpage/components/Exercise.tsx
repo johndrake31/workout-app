@@ -38,10 +38,10 @@ const Exercise: React.FC<IExercise> = (props) => {
   };
   return (
     <div className='text-white bg-dark'>
-      <Card sx={{ maxWidth: '100%' }}>
+      <Card sx={{ maxWidth: matches ? '100%' : '50%', margin: 'auto'}}>
         <CardMedia
           component='img'
-          sx={{ maxHeight: '25%', maxWidth: matches ?'100%' : '60%', margin: 'auto' }}
+          sx={{ maxHeight: '25%', margin: 'auto' }}
           image={image}
           alt=''
         />
@@ -62,7 +62,7 @@ const Exercise: React.FC<IExercise> = (props) => {
       </Card>
 
       <div className='container'>
-        <div className='row mt-3 justify-content-between'>
+        <div className='row mt-4 justify-content-between'>
           <div className='col-8 h4 p-2'>
             <span
               className='me-5'

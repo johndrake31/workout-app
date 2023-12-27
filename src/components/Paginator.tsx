@@ -16,7 +16,7 @@ const Paginator: React.FC<IPaginator> = ({
     changePage(num);
   };
   return (
-    <div className="container px-4 mb-4">
+    <div className="container px-4 my-4">
       <div className='row gx-4 justify-content-around align-items-center bd-light text-white'>
         <button
           className='col-3 btn btn-dark text-white h4'
