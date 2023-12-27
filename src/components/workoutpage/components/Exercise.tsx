@@ -18,14 +18,13 @@ const Exercise: React.FC<IExercise> = (props) => {
     // uri = "",
     metric = true,
     notes = "",
-    isVideo,
+    isVideo = false,
     imgUrl,
   } = props;
   const [exWeight, setExWeight] = useState<number>();
   const [image, setImage] = useState("");
   
   useEffect(() => {
-    console.log("props", props);
     if (weight) setExWeight(weight);
     if (imgUrl) setImage(imgUrl);
   }, [imgUrl, weight]);
