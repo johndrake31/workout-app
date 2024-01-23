@@ -1,11 +1,11 @@
 FROM node:16-alpine
 
+WORKDIR /app
 # Install app dependencies
 COPY package*.json ./
 RUN npm ci
 
 # Set the working directory in the container
-WORKDIR /app
 
 # Bundle app source
 COPY . .

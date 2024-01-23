@@ -20,11 +20,7 @@ jobs:
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          IMAGE_NAME: johndrake31/workout-app
-          TAG: latest
         run: |
-          docker buildx create --use
+          docker build -t johndrake31/workout-app:latest .
           docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-          docker buildx build --platform linux/amd64,linux/arm64 -t $IMAGE_NAME:$TAG -t $IMAGE_NAME:latest -f Dockerfile .
-          docker push $IMAGE_NAME:$TAG
-          docker push $IMAGE_NAME:latest
+          docker push johndrake31/workout-app:latest
