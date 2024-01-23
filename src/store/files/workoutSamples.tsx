@@ -11,8 +11,8 @@ import shrugsDB from "../images/shoulderShrugs.jpg";
 import deadliftBB from "../images/barbellDeadLift.jpg";
 import rearDeltFly from "../images/rearDeltFlyes.jpg";
 import calfRaisesBW from "../images/calfRaise.jpeg";
-import boxSquat from "../images/boxSquat.jpg";
 import pullup from "../images/pullup1.jpg";
+
 import pullover from "../images/pullover.png";
 import situps from "../images/situps2.jpg";
 import goodMornings from "../images/goodMornings.png";
@@ -183,17 +183,17 @@ export const workoutSamples: IWorkout[] = [
       "Rapid and dramatic strength gains. Your muscle will begin to feel hard and dense.",
     weekDuration: [4, 6],
     exercises: [
-      {
-        title: "Box Squats",
-        sets: [1],
-        reps: [10],
-        weight: 20,
-        timed: false,
-        timer: null,
-        notes: null,
-        metric: true,
-        imgUrl: boxSquat,
-      },
+      // {
+      //   title: "Box Squats",
+      //   sets: [1],
+      //   reps: [10],
+      //   weight: 20,
+      //   timed: false,
+      //   timer: null,
+      //   notes: null,
+      //   metric: true,
+      //   imgUrl: boxSquat,
+      // },
       {
         title: "Barbell Squats",
         sets: [4, 6],
