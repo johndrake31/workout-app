@@ -13,5 +13,7 @@ COPY . .
 # Build the React app
 RUN npm run build --verbose
 
+EXPOSE 3000
+
 # Command to serve the production build
 CMD ["npm", "run", "start:prod"]
